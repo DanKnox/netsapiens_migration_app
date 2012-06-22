@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class ExportSqlTask - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/export_sql_task.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="MigrationTask.html">MigrationTask</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-call_disposition">#call_disposition</a>
+    
+    <li><a href="#method-i-call_list">#call_list</a>
+    
+    <li><a href="#method-i-callqueue_config">#callqueue_config</a>
+    
+    <li><a href="#method-i-cdr">#cdr</a>
+    
+    <li><a href="#method-i-dial_policy_config">#dial_policy_config</a>
+    
+    <li><a href="#method-i-dialplan_config">#dialplan_config</a>
+    
+    <li><a href="#method-i-dialplans">#dialplans</a>
+    
+    <li><a href="#method-i-dialpolicies">#dialpolicies</a>
+    
+    <li><a href="#method-i-domains_config">#domains_config</a>
+    
+    <li><a href="#method-i-execute">#execute</a>
+    
+    <li><a href="#method-i-export_tables">#export_tables</a>
+    
+    <li><a href="#method-i-feature_config">#feature_config</a>
+    
+    <li><a href="#method-i-huntgroup_config">#huntgroup_config</a>
+    
+    <li><a href="#method-i-huntgroup_entry_config">#huntgroup_entry_config</a>
+    
+    <li><a href="#method-i-operator">#operator</a>
+    
+    <li><a href="#method-i-phone_book">#phone_book</a>
+    
+    <li><a href="#method-i-registrar_config">#registrar_config</a>
+    
+    <li><a href="#method-i-subscriber_config">#subscriber_config</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActivateConferenceSqlTask.html">ActivateConferenceSqlTask</a>
+  
+    <li><a href="./ActivateSqlTask.html">ActivateSqlTask</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CopyConferenceSqlTask.html">CopyConferenceSqlTask</a>
+  
+    <li><a href="./CopySqlTask.html">CopySqlTask</a>
+  
+    <li><a href="./ExportConferenceSqlTask.html">ExportConferenceSqlTask</a>
+  
+    <li><a href="./ExportSqlTask.html">ExportSqlTask</a>
+  
+    <li><a href="./ImportConferenceSqlTask.html">ImportConferenceSqlTask</a>
+  
+    <li><a href="./ImportSqlTask.html">ImportSqlTask</a>
+  
+    <li><a href="./LosAngelesDatabase.html">LosAngelesDatabase</a>
+  
+    <li><a href="./MigrationController.html">MigrationController</a>
+  
+    <li><a href="./MigrationHelper.html">MigrationHelper</a>
+  
+    <li><a href="./MigrationTask.html">MigrationTask</a>
+  
+    <li><a href="./MoveConferenceDataTask.html">MoveConferenceDataTask</a>
+  
+    <li><a href="./MoveDomainDataTask.html">MoveDomainDataTask</a>
+  
+    <li><a href="./MoveFilesystemDataTask.html">MoveFilesystemDataTask</a>
+  
+    <li><a href="./NewYorkDatabase.html">NewYorkDatabase</a>
+  
+    <li><a href="./SanDiegoDatabase.html">SanDiegoDatabase</a>
+  
+    <li><a href="./SanDiegoNdp.html">SanDiegoNdp</a>
+  
+    <li><a href="./SshClient.html">SshClient</a>
+  
+    <li><a href="./TaskManager.html">TaskManager</a>
+  
+    <li><a href="./UpdatePhoneConfigTask.html">UpdatePhoneConfigTask</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ExportSqlTask</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="EXPORT_TABLES">EXPORT_TABLES
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-call_disposition" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">call_disposition</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="call_disposition-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 54</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">call_disposition</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/call_disposition' from call_disposition where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- call_disposition-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- call_disposition-method -->
+
+    
+      <div id="method-i-call_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">call_list</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="call_list-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">call_list</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/call_list' from call_list where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- call_list-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- call_list-method -->
+
+    
+      <div id="method-i-callqueue_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">callqueue_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="callqueue_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 38</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">callqueue_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/callqueue_config' from callqueue_config where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- callqueue_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- callqueue_config-method -->
+
+    
+      <div id="method-i-cdr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">cdr</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="cdr-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 74</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">cdr</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/cdr' from cdr where (orig_domain = '#{@domain}' or term_domain = '#{@domain}') and (time_start &gt; date_sub( utc_timestamp(), interval #{CDR_INTERVAL} day ))&quot;</span> 
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- cdr-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- cdr-method -->
+
+    
+      <div id="method-i-dial_policy_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dial_policy_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dial_policy_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 70</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dial_policy_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/dial_policy_config' from dial_policy_config where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dial_policy_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dial_policy_config-method -->
+
+    
+      <div id="method-i-dialplan_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dialplan_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dialplan_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dialplan_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/dialplan_config' from dialplan_config where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dialplan_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dialplan_config-method -->
+
+    
+      <div id="method-i-dialplans" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dialplans</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dialplans-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 58</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dialplans</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/dialplans' from dialplans where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dialplans-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dialplans-method -->
+
+    
+      <div id="method-i-dialpolicies" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dialpolicies</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dialpolicies-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dialpolicies</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/dialpolicies' from dialpolicies where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dialpolicies-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dialpolicies-method -->
+
+    
+      <div id="method-i-domains_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">domains_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="domains_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">domains_config</span>
+  <span class="ruby-node">&quot;SELECT * INTO OUTFILE '/tmp/#{@domain}/domains_config' FROM domains_config WHERE domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- domains_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- domains_config-method -->
+
+    
+      <div id="method-i-execute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">execute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="execute-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 6</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">execute</span>
+  <span class="ruby-identifier">logger</span> <span class="ruby-node">&quot;Exporting Sql for #{@domain}\n&quot;</span>
+  <span class="ruby-constant">EXPORT_TABLES</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">logger</span> <span class="ruby-node">&quot;Sql Output for #{table}\n&quot;</span>
+    <span class="ruby-constant">SSH_CREDENTIALS</span>[<span class="ruby-constant">PRIMARY_CITY</span>][<span class="ruby-value">:model</span>].<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-identifier">send</span>( <span class="ruby-identifier">table</span> )
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- execute-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- execute-method -->
+
+    
+      <div id="method-i-export_tables" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">export_tables</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="export_tables-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">export_tables</span>
+  <span class="ruby-constant">EXPORT_TABLES</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- export_tables-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- export_tables-method -->
+
+    
+      <div id="method-i-feature_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">feature_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="feature_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">feature_config</span>
+  <span class="ruby-node">&quot;SELECT * INTO OUTFILE '/tmp/#{@domain}/feature_config' FROM feature_config WHERE callee_match LIKE '%#{@domain}%'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- feature_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- feature_config-method -->
+
+    
+      <div id="method-i-huntgroup_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">huntgroup_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="huntgroup_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 42</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">huntgroup_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/huntgroup_config' from huntgroup_config where huntgroup_domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- huntgroup_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- huntgroup_config-method -->
+
+    
+      <div id="method-i-huntgroup_entry_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">huntgroup_entry_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="huntgroup_entry_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 46</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">huntgroup_entry_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/huntgroup_entry_config' from huntgroup_entry_config where huntgroup_domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- huntgroup_entry_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- huntgroup_entry_config-method -->
+
+    
+      <div id="method-i-operator" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">operator</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="operator-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">operator</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/operator' from operator where queue_domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- operator-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- operator-method -->
+
+    
+      <div id="method-i-phone_book" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">phone_book</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="phone_book-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">phone_book</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/phone_book' from phone_book where domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- phone_book-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- phone_book-method -->
+
+    
+      <div id="method-i-registrar_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">registrar_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="registrar_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 22</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">registrar_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/registrar_config' from registrar_config where subscriber_domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- registrar_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- registrar_config-method -->
+
+    
+      <div id="method-i-subscriber_config" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">subscriber_config</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="subscriber_config-source">
+            <pre><span class="ruby-comment"># File app/models/export_sql_task.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subscriber_config</span>
+  <span class="ruby-node">&quot;select * INTO OUTFILE '/tmp/#{@domain}/subscriber_config' from subscriber_config where aor_host = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- subscriber_config-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- subscriber_config-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

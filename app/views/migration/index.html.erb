@@ -1,0 +1,29 @@
+<%= form_tag migration_index_path, :method => :post do %>
+	<div class="form_description">
+	<h2>NetSapiens Hosted Domain Migration Form</h2>
+	<p>You will use this form during the hosted migration process -- wiki Article 		http://wiki.vintalk.com/misc_list_of_items_to_doc/Reza/Hosted_Migration_Summary</p>
+	</div>						
+	<ul >
+		<li id="li_1" >
+			<%= label_tag :domain, 'NetSapiens Domain Name' %>
+			<div>
+				<%= select("domain", "domain", SanDiegoDatabase.where('domain != "*"').order('domain asc').all.collect {|d| [ d.domain, d.domain ] }, { :include_blank => true })	%>
+			</div>
+		</li>
+		<li id="li_1" >
+			<%= label_tag :city, 'City To Migrate To' %>
+			<div>
+				<%= select_tag :city, 
+							options_for_select([["Los Angeles", "la"], ["New York", "ny"]]),
+							:class => 'element select medium'
+				%>
+			</div>
+		</li>
+	
+			<li class="buttons">
+	    <input type="hidden" name="form_id" value="334115" />
+	    
+		<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+</li>
+	</ul>
+<% end %>
