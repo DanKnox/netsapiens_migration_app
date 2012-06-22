@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class MigrationTask - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/migration_task.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-execute">#execute</a>
+    
+    <li><a href="#method-i-logger">#logger</a>
+    
+    <li><a href="#method-i-rollback">#rollback</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActivateConferenceSqlTask.html">ActivateConferenceSqlTask</a>
+  
+    <li><a href="./ActivateSqlTask.html">ActivateSqlTask</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CopyConferenceSqlTask.html">CopyConferenceSqlTask</a>
+  
+    <li><a href="./CopySqlTask.html">CopySqlTask</a>
+  
+    <li><a href="./ExportConferenceSqlTask.html">ExportConferenceSqlTask</a>
+  
+    <li><a href="./ExportSqlTask.html">ExportSqlTask</a>
+  
+    <li><a href="./ImportConferenceSqlTask.html">ImportConferenceSqlTask</a>
+  
+    <li><a href="./ImportSqlTask.html">ImportSqlTask</a>
+  
+    <li><a href="./LosAngelesDatabase.html">LosAngelesDatabase</a>
+  
+    <li><a href="./MigrationController.html">MigrationController</a>
+  
+    <li><a href="./MigrationHelper.html">MigrationHelper</a>
+  
+    <li><a href="./MigrationTask.html">MigrationTask</a>
+  
+    <li><a href="./MoveConferenceDataTask.html">MoveConferenceDataTask</a>
+  
+    <li><a href="./MoveDomainDataTask.html">MoveDomainDataTask</a>
+  
+    <li><a href="./MoveFilesystemDataTask.html">MoveFilesystemDataTask</a>
+  
+    <li><a href="./NewYorkDatabase.html">NewYorkDatabase</a>
+  
+    <li><a href="./SanDiegoDatabase.html">SanDiegoDatabase</a>
+  
+    <li><a href="./SanDiegoNdp.html">SanDiegoNdp</a>
+  
+    <li><a href="./SshClient.html">SshClient</a>
+  
+    <li><a href="./TaskManager.html">TaskManager</a>
+  
+    <li><a href="./UpdatePhoneConfigTask.html">UpdatePhoneConfigTask</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class MigrationTask</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(domain,city)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/models/migration_task.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">domain</span>,<span class="ruby-identifier">city</span>)
+  <span class="ruby-ivar">@domain</span> = <span class="ruby-identifier">domain</span>
+  <span class="ruby-ivar">@city</span>   = <span class="ruby-identifier">city</span>
+  <span class="ruby-identifier">logger</span> <span class="ruby-node">&quot;Set @domain = #{@domain} for domain = #{domain}\n&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-execute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">execute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="execute-source">
+            <pre><span class="ruby-comment"># File app/models/migration_task.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">execute</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- execute-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- execute-method -->
+
+    
+      <div id="method-i-logger" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">logger</span><span
+            class="method-args">(statement)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="logger-source">
+            <pre><span class="ruby-comment"># File app/models/migration_task.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">logger</span>(<span class="ruby-identifier">statement</span>)
+  <span class="ruby-constant">ActionController</span><span class="ruby-operator">::</span><span class="ruby-constant">Base</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-identifier">statement</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- logger-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- logger-method -->
+
+    
+      <div id="method-i-rollback" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rollback</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="rollback-source">
+            <pre><span class="ruby-comment"># File app/models/migration_task.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rollback</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- rollback-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- rollback-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

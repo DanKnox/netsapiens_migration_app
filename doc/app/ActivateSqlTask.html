@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class ActivateSqlTask - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/models/activate_sql_task.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="MigrationTask.html">MigrationTask</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-activate_sql_for">#activate_sql_for</a>
+    
+    <li><a href="#method-i-dial_policy_update">#dial_policy_update</a>
+    
+    <li><a href="#method-i-dialplan_update">#dialplan_update</a>
+    
+    <li><a href="#method-i-domains_update">#domains_update</a>
+    
+    <li><a href="#method-i-execute">#execute</a>
+    
+    <li><a href="#method-i-feature_update">#feature_update</a>
+    
+    <li><a href="#method-i-registrar_update">#registrar_update</a>
+    
+    <li><a href="#method-i-subscriber_update">#subscriber_update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ActivateConferenceSqlTask.html">ActivateConferenceSqlTask</a>
+  
+    <li><a href="./ActivateSqlTask.html">ActivateSqlTask</a>
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./CopyConferenceSqlTask.html">CopyConferenceSqlTask</a>
+  
+    <li><a href="./CopySqlTask.html">CopySqlTask</a>
+  
+    <li><a href="./ExportConferenceSqlTask.html">ExportConferenceSqlTask</a>
+  
+    <li><a href="./ExportSqlTask.html">ExportSqlTask</a>
+  
+    <li><a href="./ImportConferenceSqlTask.html">ImportConferenceSqlTask</a>
+  
+    <li><a href="./ImportSqlTask.html">ImportSqlTask</a>
+  
+    <li><a href="./LosAngelesDatabase.html">LosAngelesDatabase</a>
+  
+    <li><a href="./MigrationController.html">MigrationController</a>
+  
+    <li><a href="./MigrationHelper.html">MigrationHelper</a>
+  
+    <li><a href="./MigrationTask.html">MigrationTask</a>
+  
+    <li><a href="./MoveConferenceDataTask.html">MoveConferenceDataTask</a>
+  
+    <li><a href="./MoveDomainDataTask.html">MoveDomainDataTask</a>
+  
+    <li><a href="./MoveFilesystemDataTask.html">MoveFilesystemDataTask</a>
+  
+    <li><a href="./NewYorkDatabase.html">NewYorkDatabase</a>
+  
+    <li><a href="./SanDiegoDatabase.html">SanDiegoDatabase</a>
+  
+    <li><a href="./SanDiegoNdp.html">SanDiegoNdp</a>
+  
+    <li><a href="./SshClient.html">SshClient</a>
+  
+    <li><a href="./TaskManager.html">TaskManager</a>
+  
+    <li><a href="./UpdatePhoneConfigTask.html">UpdatePhoneConfigTask</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class ActivateSqlTask</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
+      
+        <dt id="ACTIVATE_TABLES">ACTIVATE_TABLES
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-activate_sql_for" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">activate_sql_for</span><span
+            class="method-args">(city,table)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="activate_sql_for-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">activate_sql_for</span>(<span class="ruby-identifier">city</span>,<span class="ruby-identifier">table</span>)
+  <span class="ruby-constant">SSH_CREDENTIALS</span>[<span class="ruby-identifier">city</span>][<span class="ruby-value">:model</span>].<span class="ruby-identifier">connection</span>.<span class="ruby-identifier">execute</span> <span class="ruby-identifier">send</span>( <span class="ruby-identifier">table</span> )
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- activate_sql_for-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- activate_sql_for-method -->
+
+    
+      <div id="method-i-dial_policy_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dial_policy_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dial_policy_update-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dial_policy_update</span>
+  <span class="ruby-node">&quot;INSERT INTO dial_policy_update SELECT '',name,domain,dial_match,mode,reason, 'no','','pending' FROM dial_policy_config WHERE domain = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dial_policy_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dial_policy_update-method -->
+
+    
+      <div id="method-i-dialplan_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">dialplan_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="dialplan_update-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dialplan_update</span>
+  <span class="ruby-node">&quot;INSERT INTO dialplan_update SELECT '',matchrule,match_from,dow,tod_from,tod_to,valid_from,valid_to,responder,parameter,to_scheme,to_user,to_host,from_name,from_scheme,from_user,from_host,dialplan,domain,plan_description,'no','pending' FROM dialplan_config WHERE dialplan='DID Table' and to_host = '#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- dialplan_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- dialplan_update-method -->
+
+    
+      <div id="method-i-domains_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">domains_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="domains_update-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">domains_update</span>
+  <span class="ruby-node">&quot;INSERT INTO domains_update SELECT '',domain,territory,dial_match,description,moh,mor,mot,rmoh,rating,resi,mksdir,call_limit,sub_limit,time_zone,dial_plan,dial_policy,policies,email_sender,from_user,from_host,'no','pending' FROM domains_config WHERE domain='#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- domains_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- domains_update-method -->
+
+    
+      <div id="method-i-execute" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">execute</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="execute-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">execute</span>
+  <span class="ruby-constant">ACTIVATE_TABLES</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">activate_sql_for</span> <span class="ruby-ivar">@city</span>, <span class="ruby-identifier">table</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- execute-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- execute-method -->
+
+    
+      <div id="method-i-feature_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">feature_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="feature_update-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">feature_update</span>
+  <span class="ruby-node">&quot;INSERT INTO feature_update SELECT '',name,control,callee_match,caller_match,day_match,hour_match,tod_from,tod_to,parameters,activation,expires,'no','','pending' FROM feature_config WHERE callee_match LIKE '@#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- feature_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- feature_update-method -->
+
+    
+      <div id="method-i-registrar_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">registrar_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="registrar_update-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">registrar_update</span>
+  <span class="ruby-node">&quot;INSERT INTO registrar_update SELECT '',aor,termination_match,received_from,term_scheme,term_user_trans,contact,nat_wan,expires,registration_required,origination_allowed,termination_allowed, authenticate_register,authenticate_invite,authentication_alg,authentication_realm,authentication_key,rate,subscriber_name,subscriber_domain,dial_plan, dial_policy,call_processing_rule,watch,srv_code,'no','no','pending' FROM registrar_config WHERE subscriber_domain='#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- registrar_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- registrar_update-method -->
+
+    
+      <div id="method-i-subscriber_update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">subscriber_update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="subscriber_update-source">
+            <pre><span class="ruby-comment"># File app/models/activate_sql_task.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">subscriber_update</span>
+  <span class="ruby-node">&quot;INSERT INTO subscriber_update SELECT '',directory_match,aor_scheme,aor_user,aor_host,admin_vmail,accept,reject,do_not_disturb,screen,forward,fwd_not_reg,simultaneous_ring, forward_busy,forward_no_answer,no_answer_timeout,firstname,lastname,subscriber_group,subscriber_login,subscriber_pin,language,rate,rating_required,data_limit
+  ,call_limit,gmt_offset,time_zone,directory_listing,directory_order,greeting_index,vmail,rcv_broadcast,vmail_say_time,vmail_say_cid,vmail_sort_lifo,email_vmail,email_address,
+  dial_plan,dial_policy,callid_nmbr,callid_name,callid_emgr,area_code,domain_dir,srv_code,'no','pending' FROM subscriber_config WHERE aor_host='#{@domain}'&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- subscriber_update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- subscriber_update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
